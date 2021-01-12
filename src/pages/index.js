@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import Button from "../components/button"
 import Header from "../components/header"
 import Layout from "../components/layout"
 
@@ -26,8 +27,8 @@ export default function Home() {
             <hr />
 
             <div className="links">
-              <a className="primary" href="mailto:contact@ashley.how">say hello</a>
-              <a className="secondary" href="about">about me</a>
+              <Button type="a" color="primary" url="mailto:contact@ashley.how" text="say hello"></Button>
+              <Button type="Link" color="secondary" url="/about" text="about me"></Button>
             </div>
           </div>
 
