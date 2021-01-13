@@ -3,7 +3,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: fixed;
+    // position: fixed;
     width: 100%;
 
     a {
@@ -12,9 +12,14 @@ nav {
         font-family: $primary-font;
         position: relative;
         font-size: 1.1em;
+        transition: color 1s;
+
+        .secondary & {
+            color: black;
+        }
 
         &:hover {
-            transition: color 1s ease-in;
+            transition: color 0.5s ease-in;
         }
 
         &::before {
@@ -28,6 +33,10 @@ nav {
             opacity: 0;
             background-color: #ffffff33;
             transition: opacity 1s ease, width 1s ease;
+        }
+
+        .secondary &::before {
+            background-color: $pale-blue;
         }
 
         &.active::before,

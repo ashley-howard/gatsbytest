@@ -5,6 +5,7 @@ $dark-blue: #0F4567;
 $light-blue: #6D9EAB;
 $aqua: #7AACB3;
 $almost-white: #99BFC5;
+$pale-blue: #CFDAE0;
 
 // fonts
 $primary-font:'Yeseva One',
@@ -13,14 +14,33 @@ $body-font:'Rosario',
 sans-serif;
 
 // imports
+@import './container';
 @import './menu';
+@import './heading';
+@import './projects';
 
 // main style
 body {
-    background: $aqua;
     font-family: $body-font;
-    // overflow: hidden;
-    // overflow-x: hidden;
+    transition: background-color 1.5s;
+
+    ::selection {
+        background: #fff;
+        color: $light-blue;
+    }
+
+    &.primary {
+        background-color: $aqua;
+    }
+
+    &.secondary {
+        background-color: white;
+
+        ::selection {
+            background: $dark-blue;
+            color: white;
+        }
+    }
 }
 
 /* width */
@@ -41,11 +61,6 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
-
-::selection {
-    background: #fff;
-    color: $light-blue;
 }
 
 hr {
@@ -81,7 +96,6 @@ hr {
     }
 }
 
-
 main {
     display: flex;
     align-items: center;
@@ -93,7 +107,6 @@ main {
     .container {
         // text-align: center;
         display: flex;
-        width: 1400px;
         align-items: center;
         justify-content: center;
 
@@ -142,19 +155,29 @@ main {
     }
 }
 
+
+p {
+    line-height: 1.5;
+}
+
 .square {
     position: fixed;
     height: 500px;
     width: 500px;
-    background: #6D9EAB;
+    background-color: #6D9EAB;
     bottom: 0;
     left: 0;
     z-index: -1;
     transform: rotate(20deg);
+    transition: background-color 1.5;
+
+    .secondary {
+        background-color: $aqua;
+    }
 }
 
 .socials {
-    position: fixed;
+    position: absolute;
     right: 40px;
     top: 0;
     display: flex;
@@ -167,7 +190,11 @@ main {
         fill: white;
         width: 20px;
         height: 20px;
-        transition: fill 1s ease;
+        transition: fill 1s;
+
+        .secondary & {
+            fill: black;
+        }
 
         &:hover {
             fill: $dark-blue;

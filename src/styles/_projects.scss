@@ -1,0 +1,65 @@
+section.projects {
+    .project {
+        display: flex;
+        margin-bottom: 30px;
+        height: 220px;
+
+        &>div {
+            width: 50%;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .img-container {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &.featured {
+        h6 {
+            color: #BCBCBC;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            color: $dark-blue;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        span {
+            display: block;
+            color: #35698A;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: $dark-blue;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 1s;
+
+            &:hover {
+                color: $almost-white;
+            }
+        }
+    }
+
+}

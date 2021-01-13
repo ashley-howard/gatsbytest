@@ -1,17 +1,33 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import Menu from "./menu"
-import SocialLinks from './social-links'
+import SocialLinks from './SocialLinks'
 
-export default function Layout({ children }) {
+
+export default function Layout({ theme, children }) {
+
+    let whichTheme;
+
+    if (!theme) {
+        whichTheme = "primary"
+    } else {
+        whichTheme = theme;
+    }
+
     return (
-        <div>
-            <header>
-                <Menu />
-            </header>
+
+        <div className="container">
+            <Helmet>
+                <body className={whichTheme}></body>
+            </Helmet>
+
+            <Menu />
 
             <SocialLinks />
 
             {children}
+
         </div>
+
     )
 }

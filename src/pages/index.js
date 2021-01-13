@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Button from "../components/button"
+import Button from "../components/Button"
 import Header from "../components/header"
 import Layout from "../components/layout"
 
@@ -41,11 +41,6 @@ export default function Home() {
 
         <div className="square"></div>
       </main>
-
-      <div>
-        <Header headerText="Test Title" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laudantium est quaerat amet, nulla nobis sapiente consequuntur commodi quibusdam odit nisi nihil veritatis maiores et molestias sed? Facilis, repudiandae atque.</p>
-      </div>
 
     </Layout>
   )

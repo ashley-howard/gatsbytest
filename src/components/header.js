@@ -2,8 +2,6 @@ import React from "react"
 
 export default function Header(props) {
     return (
-        <div>
-            {props.headerText}
-        </div>
+        <h1 className="heading">{props.headerText}</h1>
     )
 }

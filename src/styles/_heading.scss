@@ -1,0 +1,19 @@
+.heading {
+    font-family: 'Yeseva One';
+    font-size: 2.5em;
+    color: $dark-blue;
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 30px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 10px;
+        width: 100%;
+        z-index: -1;
+        left: -10px;
+        bottom: 2px;
+        background-color: $pale-blue;
+    }
+}
