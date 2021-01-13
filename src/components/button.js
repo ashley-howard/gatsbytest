@@ -10,8 +10,8 @@ function BtnA(props) {
 }
 
 export default function Button(props) {
-    if (props.type === 'Link') {
-        return <BtnLink color={props.color} url={props.url} text={props.text} />;
+    if (props.url.includes(':')) {
+        return <BtnA color={props.color} url={props.url} text={props.text} />;
     }
-    return <BtnA color={props.color} url={props.url} text={props.text} />;
+    return <BtnLink color={props.color} url={props.url} text={props.text} />;
 }

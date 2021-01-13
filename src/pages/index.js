@@ -12,7 +12,6 @@ export default function Home() {
         <link rel="canonical" href="https://ashley.how" />
       </Helmet>
 
-
       <main>
         <div className="container">
 
@@ -27,8 +26,8 @@ export default function Home() {
             <hr />
 
             <div className="links">
-              <Button type="a" color="primary" url="mailto:contact@ashley.how" text="say hello"></Button>
-              <Button type="Link" color="secondary" url="/about" text="about me"></Button>
+              <Button color="primary" url="mailto:contact@ashley.how" text="say hello"></Button>
+              <Button color="secondary" url="/about" text="about me"></Button>
             </div>
           </div>
 
@@ -48,7 +47,6 @@ export default function Home() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga laudantium est quaerat amet, nulla nobis sapiente consequuntur commodi quibusdam odit nisi nihil veritatis maiores et molestias sed? Facilis, repudiandae atque.</p>
       </div>
 
-      <a href="javascript:gaOptout();">Deactivate Google Analytics</a>
     </Layout>
   )
 }

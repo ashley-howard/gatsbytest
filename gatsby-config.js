@@ -7,6 +7,12 @@
 module.exports = {
   /* Your site config here */
   pathPrefix: "/gatsbytest",
+  flags: {
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PRESERVE_WEBPACK_CACHE: true,
+    FAST_DEV: true,
+    FAST_REFRESH: true,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,
