@@ -3,26 +3,21 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    // position: fixed;
-    width: 100%;
     position: absolute;
+    width: 100%;
     top: 0;
     left: 0;
+    // background-color: transparent;
+    // transition: background-color 1s;
 
     a {
         color: white;
-        text-decoration: none;
         font-family: $primary-font;
         position: relative;
         font-size: 1.1em;
-        transition: color 1s;
 
         .secondary & {
             color: black;
-        }
-
-        &:hover {
-            transition: color 0.5s ease-in;
         }
 
         &::before {
@@ -48,4 +43,10 @@ nav {
             width: 100%;
         }
     }
+
+    // &.show {
+    //     background-color: #ffffffe3;
+    //     z-index: 1;
+    // }
 }
+

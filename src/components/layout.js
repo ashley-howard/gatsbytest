@@ -1,8 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import Footer from "./Footer";
 import Menu from "./menu"
 import SocialLinks from './SocialLinks'
-
 
 export default function Layout({ theme, children }) {
 
@@ -27,6 +27,7 @@ export default function Layout({ theme, children }) {
 
             {children}
 
+            <Footer />
         </div>
 
     )

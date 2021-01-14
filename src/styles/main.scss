@@ -19,11 +19,15 @@ sans-serif;
 @import './socials';
 @import './heading';
 @import './projects';
+@import './footer';
+@import './transitions';
+// @import './page-transition';
 
 // main style
 body {
     font-family: $body-font;
     transition: background-color 1.5s;
+    // line-height: 0;
 
     ::selection {
         background: #fff;
@@ -42,6 +46,10 @@ body {
             color: white;
         }
     }
+}
+
+a {
+    text-decoration: none;
 }
 
 /* width */
@@ -185,13 +193,12 @@ p {
 
     a {
         color: white;
-        text-decoration: none;
         padding: 15px 40px;
         margin-right: 20px;
         margin-top: 10px;
         border: 2px solid white;
         border-radius: 4px;
-        transition: background-color 0.5s;
+        transition: background-color 1s;
         font-family: $primary-font;
         font-size: 1.1em;
 

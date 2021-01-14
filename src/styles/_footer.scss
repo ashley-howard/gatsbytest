@@ -1,0 +1,36 @@
+footer {
+    background: #0F4567;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color: white;
+    height: 100px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: $light-blue;
+        }
+    }
+
+    .footer-socials {
+        width: 100px;
+        display: flex;
+        justify-content: space-around;
+
+        svg {
+            width: 15px;
+            height: 15px;
+            fill: white;
+
+            &:hover {
+                fill: $light-blue;
+            }
+        }
+    }
+}

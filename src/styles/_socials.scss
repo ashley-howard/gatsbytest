@@ -12,8 +12,7 @@
         fill: white;
         width: 20px;
         height: 20px;
-        transition: fill 1s;
-
+ 
         .secondary & {
             fill: black;
         }
@@ -24,6 +23,6 @@
     }
 
     &.hide svg {
-        fill: $pale-blue;
+        fill: #082c4036;
     }
 }

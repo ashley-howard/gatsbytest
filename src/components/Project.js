@@ -2,21 +2,28 @@ import React from "react"
 import { Link } from "gatsby";
 
 function ProjectFeatured(props) {
-    let whichLink;
+    let titleLink;
     if (props.url.includes(':')) {
-        whichLink = <a href={props.url}>Visit site</a>
+        titleLink = <a href={props.url}>{props.title}</a>
     } else {
-        whichLink = <Link to={props.url}>Read more</Link>
+        titleLink = <Link to={props.url}>{props.title}</Link>
+    }
+
+    let smartLink;
+    if (props.url.includes(':')) {
+        smartLink = <a href={props.url}>Visit site</a>
+    } else {
+        smartLink = <Link to={props.url}>Read more</Link>
     }
 
     return (
         <div className="project">
             <div className="content">
                 <h6>{props.type}</h6>
-                <h2>{props.title}</h2>
+                <h2>{titleLink}</h2>
                 <p>{props.desc}</p>
                 <span>{props.tags}</span>
-                {whichLink}
+                {smartLink}
             </div>
 
             <div className="img-container">
@@ -27,21 +34,28 @@ function ProjectFeatured(props) {
 }
 
 function ProjectStandard(props) {
-    let whichLink;
+    let titleLink;
     if (props.url.includes(':')) {
-        whichLink = <a href={props.url}>Visit site</a>
+        titleLink = <a href={props.url}>{props.title}</a>
     } else {
-        whichLink = <Link to={props.url}>Read more</Link>
+        titleLink = <Link to={props.url}>{props.title}</Link>
     }
-    
+
+    let smartLink;
+    if (props.url.includes(':')) {
+        smartLink = <a href={props.url}>Visit site</a>
+    } else {
+        smartLink = <Link to={props.url}>Read more</Link>
+    }
+
     return (
-        <div className="project" style={props.theme ? { backgroundColor: props.theme } : { backgroundColor: '#CFDAE0' }}>
-            <div className="content">
+        <div className="project">
+            <div className="content" style={props.theme ? { backgroundColor: props.theme } : { backgroundColor: '#0F4567' }}>
                 <h6>{props.type}</h6>
-                <h2>{props.title}</h2>
+                <h2>{titleLink}</h2>
                 <p>{props.desc}</p>
                 <span>{props.tags}</span>
-                {whichLink}
+                {smartLink}
             </div>
 
             <div className="img-container">

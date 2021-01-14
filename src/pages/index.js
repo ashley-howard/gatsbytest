@@ -3,44 +3,55 @@ import { Helmet } from "react-helmet"
 import Button from "../components/Button"
 import Layout from "../components/layout"
 
-export default function Home() {
-  return (
-    <Layout>
-      <Helmet>
-        <title>Web Designer East London | Ashley Howard | Bespoke Web Design and Development</title>
-        <link rel="canonical" href="https://ashley.how" />
-      </Helmet>
+class Home extends React.Component {
 
-      <main>
-        <div className="container">
+  // componentDidMount() {
+  //   setTimeout(function () {
+  //     document.getElementById('page-transition').style.display = "none"
+  //   }, 2000);
+  // };
 
-          <div className="column left">
-            <h1>
-              <span>I create websites that</span>
-              <span>help small businesses thrive</span>
-            </h1>
+  render() {
+    return (
+      <Layout>
+        <Helmet>
+          <title>Web Designer East London | Ashley Howard | Bespoke Web Design and Development</title>
+          <link rel="canonical" href="https://ashley.how" />
+        </Helmet>
 
-            <p>I create bespoke websites from scratch that are modern, mobile-friendly, and affordable.</p>
+        <main>
+          <div className="container">
 
-            <hr />
+            <div className="column left">
+              <h1>
+                <span>I create websites that</span>
+                <span>help small businesses thrive</span>
+              </h1>
 
-            <div className="links">
-              <Button color="primary" url="mailto:contact@ashley.how" text="say hello"></Button>
-              <Button color="secondary" url="/about" text="about me"></Button>
+              <p>I create bespoke websites from scratch that are modern, mobile-friendly, and affordable.</p>
+
+              <hr />
+
+              <div className="links">
+                <Button color="primary" url="mailto:contact@ashley.how" text="say hello"></Button>
+                <Button color="secondary" url="/about" text="about me"></Button>
+              </div>
             </div>
+
+            <div className="column right">
+              <div className="img-container">
+                <img src="assets/img/portrait.jpg" alt="" />
+              </div>
+            </div>
+
           </div>
 
-          <div className="column right">
-            <div className="img-container">
-              <img src="assets/img/portrait.jpg" alt="" />
-            </div>
-          </div>
+          <div className="square"></div>
+        </main>
 
-        </div>
-
-        <div className="square"></div>
-      </main>
-
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
+
+export default Home;
