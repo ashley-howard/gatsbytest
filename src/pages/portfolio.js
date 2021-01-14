@@ -26,7 +26,7 @@ export default function Portfolio() {
                     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus vulputate aliquam. 
                 Fusce consectetur nisi est, malesuada aliquet nibh ultrices id."
                     tags="#lorem #ipsum #other"
-                    url="www.website.com"
+                    url="https://www.website.com"
                 />
 
                 <Project
@@ -37,7 +37,7 @@ export default function Portfolio() {
                     alt="project image"
                     desc="Phasellus placerat, magna eu egestas porttitor, sem libero egestas diam, eu ultrices mauris lorem in diam."
                     tags="#lorem #ipsum #other"
-                    url="www.website.com"
+                    url="/about"
                 />
             </section>
 
@@ -53,7 +53,7 @@ export default function Portfolio() {
                     theme="white"
                     desc="Phasellus placerat, magna eu egestas porttitor, sem libero egestas diam, eu ultrices mauris lorem in diam."
                     tags="#lorem #ipsum #other"
-                    url="www.website.com"
+                    url="https://www.website.com"
                 />
                 <Project
                     type="Website"
@@ -62,7 +62,7 @@ export default function Portfolio() {
                     alt="project image"
                     desc="Phasellus placerat, magna eu egestas porttitor, sem libero egestas diam, eu ultrices mauris lorem in diam."
                     tags="#lorem #ipsum #other"
-                    url="/about"
+                    url="/contact"
                 />
             </section>
         </Layout>

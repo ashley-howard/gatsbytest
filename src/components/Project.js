@@ -1,6 +1,14 @@
 import React from "react"
+import { Link } from "gatsby";
 
 function ProjectFeatured(props) {
+    let whichLink;
+    if (props.url.includes(':')) {
+        whichLink = <a href={props.url}>Visit site</a>
+    } else {
+        whichLink = <Link to={props.url}>Read more</Link>
+    }
+
     return (
         <div className="project">
             <div className="content">
@@ -8,7 +16,7 @@ function ProjectFeatured(props) {
                 <h2>{props.title}</h2>
                 <p>{props.desc}</p>
                 <span>{props.tags}</span>
-                <a href={props.url}>Visit site</a>
+                {whichLink}
             </div>
 
             <div className="img-container">
@@ -19,13 +27,26 @@ function ProjectFeatured(props) {
 }
 
 function ProjectStandard(props) {
+    let whichLink;
+    if (props.url.includes(':')) {
+        whichLink = <a href={props.url}>Visit site</a>
+    } else {
+        whichLink = <Link to={props.url}>Read more</Link>
+    }
+    
     return (
         <div className="project" style={props.theme ? { backgroundColor: props.theme } : { backgroundColor: '#CFDAE0' }}>
-            <h6>{props.type}</h6>
-            <h2>{props.title}</h2>
-            <p>{props.desc}</p>
-            <span>{props.tags}</span>
-            <a href={props.url}>Visit site</a>
+            <div className="content">
+                <h6>{props.type}</h6>
+                <h2>{props.title}</h2>
+                <p>{props.desc}</p>
+                <span>{props.tags}</span>
+                {whichLink}
+            </div>
+
+            <div className="img-container">
+                <img src={props.img} alt={props.alt} />
+            </div>
         </div>
     )
 }

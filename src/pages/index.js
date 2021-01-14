@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Button from "../components/Button"
-import Header from "../components/header"
 import Layout from "../components/layout"
 
 export default function Home() {
