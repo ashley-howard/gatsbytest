@@ -1,48 +1,61 @@
 nav {
     height: 70px;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    // align-items: center;
+    // justify-content: space-around;
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
+
+    .menu-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+
+        @media only screen and (max-width: 576px) {
+            display: none;
+        }
+
+        a {
+            color: white;
+            font-family: $primary-font;
+            position: relative;
+            font-size: 1.1em;
+
+            .secondary & {
+                color: black;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 10px;
+                width: 0;
+                z-index: -1;
+                left: -20px;
+                bottom: -2px;
+                opacity: 0;
+                background-color: #ffffff33;
+                transition: opacity 1s ease, width 1s ease;
+            }
+
+            .secondary &::before {
+                background-color: $pale-blue;
+            }
+
+            &.active::before,
+            &:hover::before {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    }
+
     // background-color: transparent;
     // transition: background-color 1s;
 
-    a {
-        color: white;
-        font-family: $primary-font;
-        position: relative;
-        font-size: 1.1em;
-
-        .secondary & {
-            color: black;
-        }
-
-        &::before {
-            position: absolute;
-            content: "";
-            height: 10px;
-            width: 0;
-            z-index: -1;
-            left: -20px;
-            bottom: -2px;
-            opacity: 0;
-            background-color: #ffffff33;
-            transition: opacity 1s ease, width 1s ease;
-        }
-
-        .secondary &::before {
-            background-color: $pale-blue;
-        }
-
-        &.active::before,
-        &:hover::before {
-            opacity: 1;
-            width: 100%;
-        }
-    }
 
     // &.show {
     //     background-color: #ffffffe3;
@@ -50,3 +63,114 @@ nav {
     // }
 }
 
+#menu-btn {
+    display: none; // flex
+    position: absolute;
+    top: 0px;
+    right: -10px;
+
+    @media only screen and (max-width: 576px) {
+        display: flex;
+    }
+
+    #menu-line {
+
+        &-left,
+        &-right {
+            position: absolute;
+            height: 5px;
+            background: $dark-blue;
+            cursor: pointer;
+            transform: rotate(0deg);
+        }
+
+        &-left {
+            width: 35px;
+            right: 30px;
+            top: 18px;
+        }
+
+        &-right {
+            width: 19px;
+            right: 31px;
+            top: 30px;
+        }
+    }
+}
+
+
+@keyframes menu-line-left-open {
+    from {
+        transform: rotate(0deg);
+        top: 20px;
+    }
+
+    to {
+        transform: rotate(45deg);
+        top: 23px;
+    }
+}
+
+@keyframes menu-line-right-open {
+    from {
+        width: 15px;
+        top: 29px;
+        transform: rotate(0deg);
+    }
+
+    to {
+        width: 20px;
+        top: 23px;
+        right: 31px;
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes menu-line-left-close {
+    from {
+        transform: rotate(45deg);
+        top: 23px;
+    }
+
+    to {
+
+        transform: rotate(0deg);
+        top: 20px;
+    }
+}
+
+@keyframes menu-line-right-close {
+    from {
+        width: 20px;
+        top: 23px;
+        right: 31px;
+        transform: rotate(135deg);
+    }
+
+    to {
+
+        width: 15px;
+        top: 29px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes menu-links-open {
+    from {
+        transform: translateY(-160px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes menu-links-close {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-160px);
+    }
+}

@@ -10,7 +10,7 @@ export default function Footer() {
             </div>
 
             <div className="copyright">
-                © 2020 Ashley Howard
+                © 2021 Ashley Howard
             </div>
 
             <div className="footer-socials">

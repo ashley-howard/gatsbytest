@@ -8,11 +8,15 @@
     justify-content: space-evenly;
     height: 100%;
 
+    @media only screen and (max-width: 1400px) {
+        right: 3%;
+    }
+
     svg {
         fill: white;
         width: 20px;
         height: 20px;
- 
+
         .secondary & {
             fill: black;
         }
@@ -24,5 +28,10 @@
 
     &.hide svg {
         fill: #082c4036;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        display: none;
     }
 }

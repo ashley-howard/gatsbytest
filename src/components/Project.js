@@ -4,14 +4,14 @@ import { Link } from "gatsby";
 function ProjectFeatured(props) {
     let titleLink;
     if (props.url.includes(':')) {
-        titleLink = <a href={props.url}>{props.title}</a>
+        titleLink = <a href={props.url} target="_blank" rel="noopener noreferrer">{props.title}</a>
     } else {
         titleLink = <Link to={props.url}>{props.title}</Link>
     }
 
     let smartLink;
     if (props.url.includes(':')) {
-        smartLink = <a href={props.url}>Visit site</a>
+        smartLink = <a href={props.url} target="_blank" rel="noopener noreferrer">Visit site</a>
     } else {
         smartLink = <Link to={props.url}>Read more</Link>
     }
@@ -36,14 +36,14 @@ function ProjectFeatured(props) {
 function ProjectStandard(props) {
     let titleLink;
     if (props.url.includes(':')) {
-        titleLink = <a href={props.url}>{props.title}</a>
+        titleLink = <a href={props.url} target="_blank" rel="noopener noreferrer">{props.title}</a>
     } else {
-        titleLink = <Link to={props.url}>{props.title}</Link>
+        titleLink = <Link to={props.url} >{props.title}</Link>
     }
 
     let smartLink;
     if (props.url.includes(':')) {
-        smartLink = <a href={props.url}>Visit site</a>
+        smartLink = <a href={props.url} target="_blank" rel="noopener noreferrer">Visit site</a>
     } else {
         smartLink = <Link to={props.url}>Read more</Link>
     }

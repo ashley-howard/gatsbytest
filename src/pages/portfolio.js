@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet"
 import Header from "../components/header"
 import Layout from "../components/layout"
 import Project from "../components/Project"
+import imgDesignPortfolio from '../img/design-portfolio.jpg'
+import imgAkin from '../img/a-kin.jpg'
 
 export default function Portfolio() {
     return (
@@ -20,24 +22,24 @@ export default function Portfolio() {
                 <Project
                     type="Website"
                     featured
-                    title="Aliquam euismod"
-                    img="https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"
+                    title="Design Portfolio"
+                    img={imgDesignPortfolio}
                     alt="project image"
                     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus vulputate aliquam. 
                 Fusce consectetur nisi est, malesuada aliquet nibh ultrices id."
-                    tags="#lorem #ipsum #other"
-                    url="https://www.website.com"
+                    tags="#single-page-app #animations #other"
+                    url="https://ashley.how/one-page-portfolio"
                 />
 
                 <Project
-                    type="Design"
+                    type="Website"
                     featured
-                    title="Vestibulum leo"
-                    img="https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png"
+                    title="Musician Portfolio"
+                    img={imgAkin}
                     alt="project image"
                     desc="Phasellus placerat, magna eu egestas porttitor, sem libero egestas diam, eu ultrices mauris lorem in diam."
-                    tags="#lorem #ipsum #other"
-                    url="/about"
+                    tags="#musician #experimental #glitchy"
+                    url="http://ashley.how/a-kin"
                 />
             </section>
 
@@ -100,7 +102,7 @@ export default function Portfolio() {
                         type="Design"
                         title="Vestibulum leo"
                         img="https://www.lantra.co.uk/sites/default/files/styles/crop_article_banner/public/2020-03/tree-3822149_1920.jpg"
-                        alt="project image"                       
+                        alt="project image"
                         desc="Phasellus placerat, magna eu egestas porttitor."
                         tags="#lorem #ipsum #other"
                         url="/contact"
