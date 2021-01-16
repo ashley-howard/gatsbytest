@@ -7,6 +7,8 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
+    opacity: 1;
+
 
     .menu-links {
         display: flex;
@@ -57,10 +59,27 @@ nav {
     // transition: background-color 1s;
 
 
-    // &.show {
-    //     background-color: #ffffffe3;
-    //     z-index: 1;
-    // }
+    &.fixed {
+        background-color: transparent;
+        z-index: 1;
+        position: fixed;
+        transform: translateY(-100%);
+        opacity: 0;
+        animation: fixed-menu ease 0.5s normal forwards;
+    }
+
+    @keyframes fixed-menu {
+        // 0% {
+ //     transform: translateY(-100%);
+ //     opacity: 0;
+ // }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            background-color: white;
+        }
+    }
 }
 
 #menu-btn {

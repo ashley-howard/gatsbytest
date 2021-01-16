@@ -174,15 +174,34 @@ p {
     position: fixed;
     height: 500px;
     width: 500px;
-    background-color: #6D9EAB;
+    background-color: $light-blue;
     bottom: 0;
     left: 0;
     z-index: -1;
     transform: rotate(20deg);
-    transition: background-color 1.5;
+    animation: square-bg 20s linear infinite normal forwards;
+    // transition: background-color 1.5s;
 
-    .secondary {
+    // .secondary & {
+    //     background-color: $dark-blue;
+    // }
+}
+
+@keyframes square-bg {
+    0% {
+        background-color: $light-blue;
+    }
+
+    25% {
+        background-color: $dark-blue;
+    }
+
+    50% {
         background-color: $aqua;
+    }
+
+    100% {
+        background-color: $almost-white;
     }
 }
 
@@ -199,12 +218,17 @@ p {
         margin-top: 10px;
         border: 2px solid white;
         border-radius: 4px;
-        transition: background-color 1s;
+        transition: background-color 1s, border-color 1s, color 1s;
         font-family: $primary-font;
         font-size: 1.1em;
 
         &.primary {
             background-color: $dark-blue;
+        }
+
+        body.secondary &.secondary {
+            color: black;
+            border: 2px solid black;
         }
 
         &:hover {

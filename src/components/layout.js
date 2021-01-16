@@ -11,10 +11,12 @@ class Layout extends React.Component {
             scrollPixelsY: 0,
             body: "",
             height: 0,
+            menu: "show",
         };
 
         this.themeChanger = this.themeChanger.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
+        this.showMenu = this.showMenu.bind(this);
     }
 
     componentDidMount() {
@@ -57,13 +59,24 @@ class Layout extends React.Component {
         }
     }
 
+    // if you're past the user's viewport height, and you scroll up, you can see the menu
+    showMenu = () => {
+        if (this.state.scrollPixelsY > (this.state.height / 1.8)) {
+            document.getElementsByTagName('nav')[0].classList.add('fixed')
+        } else {
+            document.getElementsByTagName('nav')[0].classList.remove('fixed')
+        }
+    }
+
     handleScroll = () => {
         this.setState({
             scrollPixelsY: window.scrollY
         });
 
         this.themeChanger()
+        this.showMenu()
     };
+
 
     render() {
         return (
