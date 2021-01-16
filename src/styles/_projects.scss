@@ -17,7 +17,7 @@ section.projects {
         .project {
             display: flex;
             margin-bottom: 75px;
-            height: 300px;
+            // height: 300px;
             justify-content: space-between;
 
             // &>div {
@@ -42,11 +42,11 @@ section.projects {
             }
 
             .img-container {
-                overflow: hidden;
+                // overflow: hidden;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 60%;
+                width: 50%;
 
                 @media only screen and (max-width: 576px) {
                     width: 100%;
@@ -169,8 +169,10 @@ section.projects {
                 @media only screen and (max-width: 576px) {
                     // width: 94%;
                     width: 100%;
-                    width: -moz-available;          /* WebKit-based browsers will ignore this. */
-                    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+                    width: -moz-available;
+                    /* WebKit-based browsers will ignore this. */
+                    width: -webkit-fill-available;
+                    /* Mozilla-based browsers will ignore this. */
                     width: fill-available;
                     height: 180px;
                 }

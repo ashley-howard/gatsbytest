@@ -3,8 +3,9 @@ import { Helmet } from "react-helmet"
 import Header from "../components/header"
 import Layout from "../components/layout"
 import Project from "../components/Project"
-import imgDesignPortfolio from '../img/design-portfolio.jpg'
-import imgAkin from '../img/a-kin.jpg'
+import imgDesignPortfolio from '../img/portfolio/design-portfolio.jpg'
+import imgPortfolio from '../img/portfolio/portfolio.jpg'
+// import imgAkin from '../img/portfolio/a-kin.jpg'
 
 export default function Portfolio() {
     return (
@@ -34,12 +35,12 @@ export default function Portfolio() {
                 <Project
                     type="Website"
                     featured
-                    title="Musician Portfolio"
-                    img={imgAkin}
+                    title="My Portfolio 3.0"
+                    img={imgPortfolio}
                     alt="project image"
                     desc="Phasellus placerat, magna eu egestas porttitor, sem libero egestas diam, eu ultrices mauris lorem in diam."
-                    tags="#musician #experimental #glitchy"
-                    url="http://ashley.how/a-kin"
+                    tags="#gatsby #scss"
+                    url="/projects/portfolio3"
                 />
             </section>
 

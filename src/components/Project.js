@@ -80,7 +80,7 @@ export default function Project(props) {
         type={props.type}
         title={props.title}
         img={props.img}
-        theme={props.theme} // enter css colour
+        theme={props.theme}
         desc={props.desc}
         tags={props.tags}
         url={props.url}

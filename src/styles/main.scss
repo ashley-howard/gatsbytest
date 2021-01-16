@@ -34,12 +34,13 @@ body {
         color: $light-blue;
     }
 
+    &#index,
     &.primary {
         background-color: $aqua;
     }
 
     &.secondary {
-        background-color: white;
+        background-color: white !important;
 
         ::selection {
             background: $dark-blue;
@@ -121,13 +122,13 @@ main {
 
         .column {
             &.left {
-                width: 50%;
+                width: 100%; // TODO: put back to 50% and enable right
                 padding: 50px;
             }
 
-            &.right {
-                width: 35%;
-            }
+            // &.right {
+            //     width: 35%;
+            // }
         }
     }
 
@@ -209,6 +210,50 @@ p {
         &:hover {
             background-color: darken($dark-blue, 5%);
         }
+    }
+}
+
+.two-columns {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .column {
+        width: 50%;
+        padding: 40px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        font-family: "Yeseva One", cursive;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+
+
+#research {
+    img {
+        border: 4px solid #272727;
+        border-radius: 10px;
+        padding: 5px;
+        background: white;
+        width: 86%;
+    }
+
+    .decorative {
+        color: #ffffff;
+        position: relative;
+        text-shadow: -5px 5px 0px #0f4567;
     }
 }
 
