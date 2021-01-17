@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import imgMeyo from "../img/portfolio/meyo.png"
 import imgSearchGif from "../img/search.gif"
 import imgCollab from "../img/collab.gif"
+import ReadyToChat from "../components/ReadyToChat"
+import Testimonials from "../components/Testimonials"
 
 class Home extends React.Component {
   render() {
@@ -21,11 +23,13 @@ class Home extends React.Component {
 
             <div className="column left">
               <h1>
-                <span>I create websites that</span>
-                <span>help small businesses thrive</span>
+                I create websites that
+                {/* <span>help small businesses thrive</span> */}
+                <span className="hero-span">help small businesses stand out,</span>
+              using simple and intuitive design.
               </h1>
 
-              <p>I create bespoke websites from scratch that are modern, mobile-friendly, and affordable.</p>
+              <p>Bespoke websites from scratch that are modern, mobile-friendly, affordable, as well as matching your personality.</p>
 
               <hr />
 
@@ -87,6 +91,10 @@ class Home extends React.Component {
             <img src={imgCollab} alt="" />
           </div>
         </section>
+
+        {/* <Testimonials /> */}
+
+        {/* <ReadyToChat /> */}
 
         <div className="square"></div>
       </Layout>

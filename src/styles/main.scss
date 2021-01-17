@@ -20,6 +20,8 @@ sans-serif;
 @import './heading';
 @import './projects';
 @import './footer';
+@import './ready-to-chat';
+@import './testimonials';
 @import './transitions';
 // @import './page-transition';
 
@@ -29,7 +31,8 @@ body {
     transition: background-color 1.5s;
     // line-height: 0;
 
-    ::selection {
+    ::selection,
+    .hero-span {
         background: #fff;
         color: $light-blue;
     }
@@ -42,7 +45,8 @@ body {
     &.secondary {
         background-color: white !important;
 
-        ::selection {
+        ::selection,
+        .hero-span {
             background: $dark-blue;
             color: white;
         }
@@ -51,6 +55,19 @@ body {
 
 a {
     text-decoration: none;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: $primary-font;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+.hero-span {
+    width: fit-content;
 }
 
 /* width */
@@ -209,13 +226,13 @@ p {
 .links {
     display: flex;
     align-items: center;
-    // justify-content: center;
+    // justify-content: center;   
 
     a {
         color: white;
         padding: 15px 40px;
-        margin-right: 20px;
-        margin-top: 10px;
+        // margin-right: 20px;
+        // margin-top: 10px;
         border: 2px solid white;
         border-radius: 4px;
         transition: background-color 1s, border-color 1s, color 1s;
@@ -235,6 +252,10 @@ p {
             background-color: darken($dark-blue, 5%);
         }
     }
+
+    &.small a {
+        padding: 12px 20px;
+    }
 }
 
 .two-columns {
@@ -251,11 +272,12 @@ p {
     h2 {
         font-size: 2.5em;
         font-family: "Yeseva One", cursive;
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
     }
 
     p {
         font-size: 1.2em;
+        margin: 15px 0;
     }
 
     img {
@@ -275,9 +297,20 @@ p {
     }
 
     .decorative {
-        color: #ffffff;
+        color: #848484;
         position: relative;
-        text-shadow: -5px 5px 0px #0f4567;
+        // text-shadow: -5px 5px 0px #0f4567;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 100%;
+            background: #212121;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
     }
 }
 

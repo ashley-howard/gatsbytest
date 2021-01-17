@@ -2,7 +2,9 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import Footer from "./Footer";
 import Menu from "./menu"
+import ReadyToChat from "./ReadyToChat";
 import SocialLinks from './SocialLinks'
+import Testimonials from "./Testimonials";
 
 class Layout extends React.Component {
     constructor({ props }) {
@@ -80,7 +82,7 @@ class Layout extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
                 <Helmet>
                     <body className={this.state.body}></body>
                 </Helmet>
@@ -89,7 +91,13 @@ class Layout extends React.Component {
 
                 <SocialLinks />
 
-                {this.props.children}
+                <div className="container">
+                    {this.props.children}
+                </div>
+
+                {/* <Testimonials /> */}
+
+                <ReadyToChat />
 
                 <Footer />
             </div>
