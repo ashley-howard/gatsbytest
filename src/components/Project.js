@@ -5,19 +5,16 @@ import imgPlaceholder from "../img/portfolio/placeholder.svg"
 class ProjectFeatured extends React.Component {
     constructor() {
         super()
-        this.state = {
-            loading: false,
-        }
+        // this.state = {
+        //     loading: false,
+        // }
     }
 
-    componentDidMount() {
- 
-
-                this.setState({
-                    loading: false,
-                })
- 
-    }
+    // componentDidMount() {
+    //     this.setState({
+    //         loading: false,
+    //     })
+    // }
 
     render() {
         let titleLink;
@@ -45,17 +42,17 @@ class ProjectFeatured extends React.Component {
                 </div>
 
                 <div className="img-container">
-                    {/* <img
+                    <img
                         src={this.props.img}
                         alt={this.props.alt}
-                    /> */}
+                    />
 
-                    <img
+                    {/* <img
                         // style={this.state.loaded ? { opacity: 1 } : {}}
                         src={this.state.loaded ? this.props.img : imgPlaceholder}
                         alt={this.props.alt}
                         onLoad={() => this.setState({ loaded: true })}
-                    />
+                    /> */}
                 </div>
             </div>
         )
