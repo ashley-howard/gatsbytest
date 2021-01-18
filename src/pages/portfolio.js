@@ -7,6 +7,9 @@ import imgDesignPortfolio from '../img/portfolio/design-portfolio.jpg'
 import imgPortfolio from '../img/portfolio/portfolio.jpg'
 // import imgAkin from '../img/portfolio/a-kin.jpg'
 
+// TO-DO
+// - Add a loading screen that only goes away when the images have loaded
+
 export default function Portfolio() {
     return (
         <Layout theme={"secondary"}>
