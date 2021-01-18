@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{w2l6:function(e,n,t){"use strict";t.r(n),t.d(n,"default",(function(){return c}));var a=t("q1tI"),l=t.n(a),o=t("qhky"),r=t("Bl7J");function c(){return l.a.createElement(r.a,null,l.a.createElement(o.a,null,l.a.createElement("title",null,"Web Designer East London | Ashley Howard | Bespoke Web Design and Development"),l.a.createElement("link",{rel:"canonical",href:"https://ashley.how"})),l.a.createElement("h1",null,"Page not found"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-8bd49ca5b60e0a3cb7f5.js.map
