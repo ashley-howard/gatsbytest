@@ -91,13 +91,13 @@ class Layout extends React.Component {
 
                 <SocialLinks />
 
-                <div className="container">
-                    {this.props.children}
-                </div>
+                {/* <div className="container"> */}
+                {this.props.children}
+                {/* </div> */}
 
                 {/* <Testimonials /> */}
 
-                <ReadyToChat />
+                {/* <ReadyToChat /> */}
 
                 <Footer />
             </div>

@@ -19,10 +19,14 @@ sans-serif;
 @import './socials';
 @import './heading';
 @import './projects';
+@import './components/project';
+@import './about';
+@import './steps';
 @import './footer';
 @import './ready-to-chat';
 @import './testimonials';
 @import './transitions';
+@import './components/backdrop';
 // @import './page-transition';
 
 // main style
@@ -60,6 +64,20 @@ a {
 h3 {
     font-size: 2em;
     font-family: $primary-font;
+    color: $dark-blue;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.6em;
+    font-family: $primary-font;
+    color: $dark-blue;
+}
+
+h5 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: $dark-blue;
 }
 
 h6 {

@@ -1,0 +1,26 @@
+.backdrop {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+
+    .filter {
+        background: #0f4567c2;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    p {
+        font-size: 1.5em;
+        width: 50%;
+        text-align: center;
+        line-height: 1.75;
+        color: white;
+        z-index: 1;
+    }
+}

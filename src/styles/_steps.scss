@@ -1,0 +1,26 @@
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .column {
+        width: 200px;
+        margin: 40px;
+        padding: 5px;
+        height: 115px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .content {
+            display: flex;
+
+            .number {
+                font-size: 5em;
+                font-family: 'Yeseva One';
+                color: #00000026;
+                margin-right: 5px;
+            }
+        }
+    }
+}

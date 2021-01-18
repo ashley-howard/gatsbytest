@@ -8,7 +8,7 @@ nav {
     top: 0;
     left: 0;
     opacity: 1;
-
+    z-index: 1;
 
     .menu-links {
         display: flex;
@@ -26,10 +26,6 @@ nav {
             position: relative;
             font-size: 1.1em;
 
-            .secondary & {
-                color: black;
-            }
-
             &::before {
                 position: absolute;
                 content: "";
@@ -41,6 +37,10 @@ nav {
                 opacity: 0;
                 background-color: #ffffff33;
                 transition: opacity 1s ease, width 1s ease;
+            }
+
+            .secondary & {
+                color: black;
             }
 
             .secondary &::before {
@@ -70,9 +70,9 @@ nav {
 
     @keyframes fixed-menu {
         // 0% {
- //     transform: translateY(-100%);
- //     opacity: 0;
- // }
+        //     transform: translateY(-100%);
+        //     opacity: 0;
+        // }
 
         100% {
             transform: translateY(0);
