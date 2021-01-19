@@ -8,6 +8,8 @@
     justify-content: space-evenly;
     height: 100%;
     z-index: 1;
+    opacity: 1;
+    transition: opacity 1.5s;
 
     @media only screen and (max-width: 1400px) {
         right: 3%;

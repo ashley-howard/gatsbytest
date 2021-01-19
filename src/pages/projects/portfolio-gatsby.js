@@ -13,6 +13,7 @@ export default function PortfolioGatsby() {
 
             <div className="container">
                 <h5>Heading</h5>
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac malesuada augue.
                 Vivamus orci lorem, varius at finibus id, imperdiet sit amet libero. Interdum et malesuada
                 fames ac ante ipsum primis in faucibus. Nulla facilisi. Fusce condimentum fermentum lacus,
@@ -25,6 +26,7 @@ export default function PortfolioGatsby() {
 
             <div className="container">
                 <h5>Heading</h5>
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac malesuada augue.
                 Vivamus orci lorem, varius at finibus id, imperdiet sit amet libero. Interdum et malesuada
                 fames ac ante ipsum primis in faucibus. Nulla facilisi. Fusce condimentum fermentum lacus,
@@ -44,6 +46,7 @@ export default function PortfolioGatsby() {
 
             <div className="container">
                 <h5>Heading</h5>
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac malesuada augue.
                 Vivamus orci lorem, varius at finibus id, imperdiet sit amet libero. Interdum et malesuada
                 fames ac ante ipsum primis in faucibus. Nulla facilisi. Fusce condimentum fermentum lacus,

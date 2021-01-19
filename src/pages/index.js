@@ -25,7 +25,7 @@ class Home extends React.Component {
               <div className="column left">
                 <h1>
                   I create websites that
-                {/* <span>help small businesses thrive</span> */}
+               
                   <span className="hero-span">help small businesses stand out,</span>
               using simple and intuitive design.
               </h1>
