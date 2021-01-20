@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import Footer from "./Footer";
 import Menu from "./menu"
+import PageTransition from "./PageTransition";
 import ReadyToChat from "./ReadyToChat";
 import SocialLinks from './SocialLinks'
 import Testimonials from "./Testimonials";
@@ -100,6 +101,8 @@ class Layout extends React.Component {
                 {/* <ReadyToChat /> */}
 
                 <Footer />
+
+                {/* <PageTransition /> */}
             </div>
         )
     }

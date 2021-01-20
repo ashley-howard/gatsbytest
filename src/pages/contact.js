@@ -5,13 +5,17 @@ import Layout from "../components/layout"
 
 export default function Contact() {
     return (
-        <Layout>
+        <Layout theme={"secondary"}>
             <Helmet>
                 <title>Contact | Ashley Howard | Bespoke Web Design and Development</title>
                 <link rel="canonical" href="https://ashley.how/contact" />
             </Helmet>
-            <Header headerText="Contact page" />
-            <p>Send us a message!</p>
+            
+            <div className="container">
+                <Header headerText="Contact page" />
+                <p>Send us a message!</p>
+            </div>
+
         </Layout>
     )
 }

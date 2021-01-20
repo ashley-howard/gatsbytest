@@ -21,6 +21,7 @@ sans-serif;
 @import './projects';
 @import './components/project';
 @import './about';
+@import './services';
 @import './steps';
 @import './footer';
 @import './ready-to-chat';
@@ -272,6 +273,7 @@ p {
 
         &:hover {
             background-color: darken($dark-blue, 5%);
+            color: white !important;
         }
     }
 
@@ -320,18 +322,37 @@ p {
 
     .decorative {
         color: #848484;
-        position: relative;
+        // position: relative;
         // text-shadow: -5px 5px 0px #0f4567;
+        animation: colour-changing 30s linear infinite alternate;
 
-        &::after {
-            position: absolute;
-            content: "";
-            height: 20px;
-            width: 100%;
-            background: #212121;
-            left: 0;
-            bottom: 0;
-            z-index: -1;
+        // &::after {
+        //     position: absolute;
+        //     content: "";
+        //     height: 11px;
+        //     width: 100%;
+        //     background: #212121;
+        //     left: 0;
+        //     bottom: 4px;
+        //     z-index: -1;
+        // }
+
+        @keyframes colour-changing {
+            0% {
+                color: rgb(248, 88, 88);
+            }
+
+            25% {
+                color: rgb(250, 200, 108);
+            }
+
+            50% {
+                color: rgb(84, 107, 235);
+            }
+
+            100% {
+                color: rgb(62, 209, 62);
+            }
         }
     }
 }

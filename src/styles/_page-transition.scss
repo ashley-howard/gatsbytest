@@ -1,31 +1,54 @@
-// #page-transition {
-//     background: #0F4567;
-//     z-index: 99;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     // transform: translateX(0);
-//     animation: page-transition 2s linear forwards;
+#page-transition {
+    background: #0F4567;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // transform: translateX(0);
+    animation: page-transition 1s ease 2s forwards;
 
-//     img {
-//         width: 100px;
-//     }
+    .inner-container {
+        height: 75px;
+        display: flex;
 
-//     @keyframes page-transition {
-//         0% {
-//             // opacity: 1;
-//             transform: translateX(0);
-//         }
+        img {
+            width: 80px;
+        }
 
-//         100% {
-//             // opacity: 0;
-//             transform: translateX(-100%);
-//         }
-//     }
+        .grouped {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 20px;
+            font-family: 'Yeseva One';
 
-// }
+            .name {
+                color: white;
+                font-size: 2em;
+            }
+
+            .role {
+                color: #70AACF;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    @keyframes page-transition {
+        0% {
+            // opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            // opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+
+}

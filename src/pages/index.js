@@ -23,12 +23,7 @@ class Home extends React.Component {
             <div className="inner-container">
 
               <div className="column left">
-                <h1>
-                  I create websites that
-               
-                  <span className="hero-span">help small businesses stand out,</span>
-              using simple and intuitive design.
-              </h1>
+                <h1>I create websites that <span className="hero-span">help small businesses stand out,</span> using simple and intuitive design.</h1>
 
                 <p>Bespoke websites from scratch that are modern, mobile-friendly, affordable, as well as matching your personality.</p>
 
