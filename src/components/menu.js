@@ -40,10 +40,11 @@ class Menu extends React.Component {
                     <Link to="/about" activeClassName="active">about</Link>
                     <Link to="/services" activeClassName="active">services</Link>
                     <Link to="/portfolio" activeClassName="active">portfolio</Link>
-                    <Link to="/contact" activeClassName="active">contact</Link>
+                    {/* <Link to="/contact" activeClassName="active">contact</Link> */}
+                    <a href="mailto:contact@ashley.how" target="_blank" rel="noopener noreferrer">get in touch</a>
                 </div>
 
-                <div id="menu-btn"  className="closed">
+                <div id="menu-btn" className="closed">
                     <div id="menu-line-left"></div>
                     <div id="menu-line-right"></div>
                 </div>

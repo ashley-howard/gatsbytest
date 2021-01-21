@@ -3,12 +3,12 @@ import { Link } from "gatsby";
 import imgPlaceholder from "../img/portfolio/placeholder.svg"
 
 class ProjectFeatured extends React.Component {
-    constructor() {
-        super()
-        // this.state = {
-        //     loading: false,
-        // }
-    }
+    // constructor() {
+    //     super()
+    //     // this.state = {
+    //     //     loading: false,
+    //     // }
+    // }
 
     // componentDidMount() {
     //     this.setState({

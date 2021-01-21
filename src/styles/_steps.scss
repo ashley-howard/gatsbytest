@@ -18,9 +18,13 @@
             .number {
                 font-size: 5em;
                 font-family: 'Yeseva One';
-                color: #00000026;
+                color: #ffffff26;
                 margin-right: 5px;
-            }
+
+                .secondary & {
+                    color: #00000026;
+                }
+            }            
         }
     }
 }

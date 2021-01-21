@@ -84,7 +84,7 @@ nav {
 
 #menu-btn {
     display: none; // flex
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: -10px;
 
@@ -101,6 +101,10 @@ nav {
             background: $dark-blue;
             cursor: pointer;
             transform: rotate(0deg);
+
+            .primary & {
+                background: white !important;
+            }
         }
 
         &-left {

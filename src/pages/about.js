@@ -23,20 +23,22 @@ export default function About() {
                 </section>
 
                 <section id="about-me">
-                    <h3>About me</h3>
-                    
+                    <Header headerText="About me" />
+
                     <p>
                         I’m Ash, and I was born and raised in East London. I’ve been a web designer and developer for well over 10 years now,
                         striving to create refreshing and modern websites, while maintaining my own style; usually something simple or minimalistic.
-                        <br /><br />
+                       </p>
+                    <p>
                         Since then I've been challenging myself to create unique (and sometimes quirky) websites, ranging from dog-themed and photorealistic
                         designs to portfolios and conversion websites. I'm always enthusiastic to start new projects with new people, while keeping my mind
                         (and fingertips) busy.
-                        <br /><br />
+                        </p>
+                    <p>
                         Being creative plays an important role in my life too, and I try to live every day as creatively as possible.
                         Music helps me a lot in the process, although I'm kinda stuck in the '90s... And when I'm trying to concentrate,
                         I go for lo-fi. I'm also passionate about technology (especially the latest gadgets), photography, and foreign languages.
-                    </p>
+                        </p>
 
                     <div className="steps">
                         <div className="column">

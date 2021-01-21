@@ -28,7 +28,7 @@ sans-serif;
 @import './testimonials';
 @import './transitions';
 @import './components/backdrop';
-// @import './page-transition';
+@import './page-transition';
 
 // main style
 body {
@@ -36,22 +36,28 @@ body {
     transition: background-color 1.5s;
     // line-height: 0;
 
-    ::selection,
-    .hero-span {
+    @media screen and (max-width: 834px) {
+        margin-top: 100px;
+    }
+
+    ::selection {
         background: #fff;
         color: $light-blue;
     }
 
-    &#index,
     &.primary {
         background-color: $aqua;
+    }
+
+    &#index {
+        background-color: $aqua;
+        // background-image: url(../video/blue-drop.mp4)
     }
 
     &.secondary {
         background-color: white !important;
 
-        ::selection,
-        .hero-span {
+        ::selection {
             background: $dark-blue;
             color: white;
         }
@@ -60,6 +66,14 @@ body {
 
 a {
     text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+
+    &+p {
+        margin-top: 20px;
+    }
 }
 
 h3 {
@@ -85,9 +99,7 @@ h6 {
     font-size: 0.9em;
 }
 
-.hero-span {
-    width: fit-content;
-}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -150,21 +162,38 @@ main {
     height: 100vh;
     width: 100%;
 
-    .container {
+    @media screen and (max-width: 834px) {
+        height: 100%;
+    }
+
+    .inner-container {
         // text-align: center;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
-        .column {
-            &.left {
-                width: 100%; // TODO: put back to 50% and enable right
-                padding: 50px;
+        @media screen and (max-width: 834px) {
+            flex-direction: column;
+        }
+
+    }
+
+    .column {
+        &.left {
+            width: 60%; // TODO: put back to 50% and enable right
+            // padding: 50px;
+
+            @media screen and (max-width: 834px) {
+                margin-bottom: 50px;
             }
+        }
 
-            // &.right {
-            //     width: 35%;
-            // }
+        &.right {
+            width: 35%;
+        }
+
+        @media screen and (max-width: 834px) {
+            width: 100% !important;
         }
     }
 
@@ -176,10 +205,18 @@ main {
         display: flex;
         flex-direction: column;
         // margin-left: -30px;
-        line-height: 50px;
+        line-height: 55px;
+
+        @media screen and (max-width: 834px) {
+            line-height: 40px;
+            margin-bottom: 0;
+        }
 
         span:nth-child(1) {
-            margin-left: -70px;
+            // margin: 15px 0;
+            color: white;
+            // width: fit-content;
+
         }
 
         span:nth-child(2) {
@@ -192,6 +229,12 @@ main {
         font-size: 1.6em;
         line-height: 40px;
         text-align: left;
+
+
+        @media screen and (max-width: 834px) {
+            font-size: 1.4em;
+            line-height: 33px;
+        }
     }
 
     img {
@@ -201,25 +244,37 @@ main {
     }
 }
 
-
-p {
-    line-height: 1.5;
-}
-
 .square {
     position: fixed;
     height: 500px;
     width: 500px;
     background-color: $light-blue;
-    bottom: 0;
-    left: 0;
     z-index: -1;
     transform: rotate(20deg);
     animation: square-bg 20s linear infinite normal forwards;
+    left: 0;
+    bottom: 0;
+    transform: rotate(20deg);
     // transition: background-color 1.5s;
 
     // .secondary & {
     //     background-color: $dark-blue;
+    // }
+
+    @media screen and (max-width: 834px) {
+        position: absolute;
+        top: 100px;
+        left: -142px;
+        height: 400px;
+        width: 400px;
+        transform: rotate(24deg);
+    }
+
+
+    // &.right {
+    //     right: 0;
+    //     top: 0;
+    //     transform: rotate(160deg);
     // }
 }
 
@@ -247,6 +302,11 @@ p {
     align-items: center;
     // justify-content: center;   
 
+    @media screen and (max-width: 834px) {
+        flex-direction: row !important;
+        justify-content: center;
+    }
+
     a {
         color: white;
         padding: 15px 40px;
@@ -258,7 +318,12 @@ p {
         font-family: $primary-font;
         font-size: 1.1em;
 
-        &:not(:nth-child(1)) {
+        @media screen and (max-width: 834px) {
+            width: 100%;
+            text-align: center;
+        }
+
+        &+a {
             margin-left: 20px;
         }
 
@@ -274,6 +339,7 @@ p {
         &:hover {
             background-color: darken($dark-blue, 5%);
             color: white !important;
+            border: 2px solid #1c69a7 !important;
         }
     }
 
@@ -288,9 +354,19 @@ p {
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width: 834px) {
+        flex-direction: column;
+        height: 100%;
+    }
+
     .column {
         width: 50%;
         padding: 40px;
+
+        @media screen and (max-width: 834px) {
+            width: 100%;
+            padding: 40px 0;
+        }
     }
 
     h2 {
@@ -309,9 +385,12 @@ p {
     }
 }
 
-
-
 #research {
+
+    @media screen and (max-width: 834px) {
+        flex-direction: column-reverse;
+    }
+
     img {
         border: 4px solid #272727;
         border-radius: 10px;
@@ -355,23 +434,23 @@ p {
             }
         }
     }
+
+
 }
 
-@media screen and (max-width: 576px) {
-    .container {
-        width: 90% !important;
+.container {
+    width: 90% !important;
 
-        h1 {
-            font-size: 2em;
-        }
+    h1 {
+        font-size: 2em;
+    }
 
-        .links {
-            flex-direction: column;
-            align-items: unset;
+    .links {
+        // flex-direction: column;
+        align-items: unset;
 
-            a {
-                margin: 5px 0;
-            }
-        }
+        // a {
+        //     margin: 5px 0;
+        // }
     }
 }

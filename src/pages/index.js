@@ -6,7 +6,9 @@ import imgMeyo from "../img/portfolio/meyo.png"
 import imgSearchGif from "../img/search.gif"
 import imgCollab from "../img/collab.gif"
 import ReadyToChat from "../components/ReadyToChat"
-import Testimonials from "../components/Testimonials"
+import imgPortrait from "../img/portrait.jpg"
+import PageTransition from "../components/PageTransition"
+
 
 class Home extends React.Component {
   render() {
@@ -23,9 +25,11 @@ class Home extends React.Component {
             <div className="inner-container">
 
               <div className="column left">
-                <h1>I create websites that <span className="hero-span">help small businesses stand out,</span> using simple and intuitive design.</h1>
+                <h1>I create websites that <span className="hero-span">help small businesses thrive</span></h1>
+                {/* <h1>I create websites that <span className="hero-span">help small businesses stand out,</span> using simple and intuitive design.</h1> */}
 
-                <p>Bespoke websites from scratch that are modern, mobile-friendly, affordable, as well as matching your personality.</p>
+                {/* <p>Bespoke websites from scratch that are modern, mobile-friendly, and affordable.</p> */}
+                <p>Bespoke websites from scratch that are modern, mobile-friendly and intuitive.</p>
 
                 <hr />
 
@@ -35,11 +39,11 @@ class Home extends React.Component {
                 </div>
               </div>
 
-              {/* <div className="column right">
-              <div className="img-container">
-                <img src="assets/img/portrait.jpg" alt="" />
+              <div className="column right">
+                <div className="img-container">
+                  <img src={imgPortrait} alt="" />
+                </div>
               </div>
-            </div> */}
 
             </div>
           </main>
@@ -93,7 +97,10 @@ class Home extends React.Component {
 
         <ReadyToChat />
 
-        <div className="square"></div>
+        <div className="square left"></div>
+        <div className="square right"></div>
+
+        <PageTransition />
       </Layout>
     )
   }
