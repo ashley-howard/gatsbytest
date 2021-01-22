@@ -45,6 +45,22 @@
             margin-right: 7px;
             margin-bottom: -1px;
         }
+
+        a:hover svg {
+            // transform: translateX(-10px);
+            animation: arrow-hover 0.5s linear infinite alternate;
+        }
+
+        @keyframes arrow-hover {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-5px);
+            }
+        }
+
     }
 
     a {
