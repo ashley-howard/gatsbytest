@@ -16,6 +16,16 @@
             width: 100%;
         }
 
+        span {
+            position: absolute;
+            bottom: 110px;
+            left: 0;
+            right: 0;
+            max-width: 1200px;
+            margin: auto;
+            color: white;
+        }
+
         h1 {
             color: white;
             font-family: $primary-font;
@@ -26,6 +36,14 @@
             right: 0;
             max-width: 1200px;
             margin: auto;
+        }
+
+        svg {
+            width: 13px;
+            height: 13px;
+            fill: white;
+            margin-right: 7px;
+            margin-bottom: -1px;
         }
     }
 

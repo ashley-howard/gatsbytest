@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby";
-import imgPlaceholder from "../img/portfolio/placeholder.svg"
 
 class ProjectFeatured extends React.Component {
     // constructor() {

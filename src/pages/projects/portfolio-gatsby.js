@@ -1,13 +1,13 @@
 import React from 'react'
-import Layout from '../../components/layout'
 import ProjectHeader from '../../components/ProjectHeader'
 import imgPortfolio from "../../img/portfolio/portfolio-gatsby/portfolio.jpg"
 import imgFlower1 from "../../img/portfolio/portfolio-gatsby/flower-1.jpg"
 import imgBirds from "../../img/portfolio/portfolio-gatsby/birds.jpg"
+import ProjectLayout from '../../components/ProjectLayout'
 
 export default function PortfolioGatsby() {
     return (
-        <Layout theme={"secondary"}>
+        <ProjectLayout>
             {/* Helmet uses ProjectHeader's title */}
             <ProjectHeader title="Portfolio 3.0" img={imgPortfolio} />
 
@@ -55,6 +55,6 @@ export default function PortfolioGatsby() {
                 eu tempus justo.</p>
             </div>
 
-        </Layout>
+        </ProjectLayout>
     )
 }

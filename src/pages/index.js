@@ -57,13 +57,13 @@ class Home extends React.Component {
               </div>
             </div>
 
-            <div className="column column-2">
+            <div className="column column-2 img">
               <img src={imgMeyo} alt="" />
             </div>
           </section>
 
           <section className="two-columns" id="research">
-            <div className="column column-1">
+            <div className="column column-1 img">
               <img src={imgSearchGif} alt="" />
             </div>
 
@@ -87,7 +87,7 @@ class Home extends React.Component {
               </div>
             </div>
 
-            <div className="column column-2">
+            <div className="column column-2 img">
               <img src={imgCollab} alt="" />
             </div>
           </section>

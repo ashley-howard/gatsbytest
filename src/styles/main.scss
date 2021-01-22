@@ -26,7 +26,6 @@ sans-serif;
 @import './footer';
 @import './ready-to-chat';
 @import './testimonials';
-@import './transitions';
 @import './components/backdrop';
 @import './page-transition';
 
@@ -65,7 +64,13 @@ body {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
+    transition: color 1s;
+}
+
+svg {
+    transition: fill 1s;
 }
 
 p {
@@ -200,7 +205,7 @@ main {
     h1 {
         font-family: $primary-font;
         color: $dark-blue;
-        font-size: 3em;
+        font-size: 3em !important;
         margin-bottom: 30px;
         display: flex;
         flex-direction: column;
@@ -357,6 +362,10 @@ main {
     @media screen and (max-width: 834px) {
         flex-direction: column;
         height: 100%;
+        // background: $dark-blue;
+        // color: white;
+        margin: 30px 0;
+        padding: 14px;
     }
 
     .column {
@@ -365,7 +374,16 @@ main {
 
         @media screen and (max-width: 834px) {
             width: 100%;
-            padding: 40px 0;
+            padding: 10px 0;
+
+            &.img {
+                display: none;
+            }
+
+            // a.secondary {
+            //     color: white !important;
+            //     border: 2px solid white !important;
+            // }
         }
     }
 
@@ -378,6 +396,10 @@ main {
     p {
         font-size: 1.2em;
         margin: 15px 0;
+
+        @media screen and (max-width: 834px) {
+            font-size: 1em;
+        }
     }
 
     img {
