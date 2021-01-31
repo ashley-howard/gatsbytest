@@ -2,12 +2,11 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import Header from "../components/header"
 import Layout from "../components/layout"
-import PageTransition from "../components/PageTransition"
 import Project from "../components/Project"
 import imgDesignPortfolio from '../img/portfolio/design-portfolio.jpg'
 import imgPortfolio from '../img/portfolio/portfolio-gatsby/portfolio.jpg'
+import imgCloset23 from '../img/portfolio/closet-23.jpg'
 // import imgAkin from '../img/portfolio/a-kin.jpg'
-
 
 // TO-DO
 // - Add a loading screen that only goes away when the images have loaded
@@ -26,6 +25,18 @@ export default function Portfolio() {
                 {/* Featured Projects */}
                 <section className="projects featured">
                     <Header headerText="Featured Projects" />
+
+                    <Project
+                        type="Website"
+                        featured
+                        title="Closet 23"
+                        img={imgCloset23}
+                        alt="project image"
+                        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus vulputate aliquam. 
+                Fusce consectetur nisi est, malesuada aliquet nibh ultrices id."
+                        tags="#clothing #childrens #wix"
+                        url="https://www.closet23.co.uk"
+                    />
 
                     <Project
                         type="Website"
@@ -119,7 +130,7 @@ export default function Portfolio() {
                 </section>
             </div>
 
-           
+
 
         </Layout>
     )

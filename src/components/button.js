@@ -6,7 +6,7 @@ function BtnLink(props) {
 }
 
 function BtnA(props) {
-    return <a className={props.color} href={props.url}>{props.text}</a>;
+    return <a className={props.color} href={props.url} target="_blank" rel="noopener noreferrer">{props.text}</a>;
 }
 
 export default function Button(props) {

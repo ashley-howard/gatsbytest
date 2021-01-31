@@ -67,13 +67,13 @@ export default function About() {
             </div>
 
             <BackDrop
-                text="“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis purus metus, at ornare ex tristique sed.”"
+                text="“I believe in creating big ideas from small ideas. In that through simplicity we can say as much as we need to.”"
                 img={img}
             />
 
-            <div className="container">
+            {/* <div className="container">
                 <section id="philosophy">
-                    {/* <h3>My philosophy</h3> */}
+                    <Header headerText="My philosophy" />
 
                     <div className="quote">
                         <ul>
@@ -84,10 +84,9 @@ export default function About() {
                         </ul>
                     </div>
                 </section>
-            </div>
+            </div> */}
 
-            <Testimonials />
-
+            {/* <Testimonials /> */}
             <ReadyToChat />
 
         </Layout>
